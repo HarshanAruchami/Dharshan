@@ -121,10 +121,10 @@ $(document).ready(function () {
 
 //H3 hover effect
 $(document).ready(function () {
-  $(".hover-cards .card h3").mouseenter(function () {
+  $(".hover-cards .card h3,#flight").mouseenter(function () {
     $(this).addClass("dummy");
   });
-  $(".hover-cards .card h3").mouseleave(function () {
+  $(".hover-cards .card h3,#flight").mouseleave(function () {
     $(this).removeClass("dummy");
   });
 });
@@ -257,29 +257,52 @@ $(document).ready(function () {
   }
 });
 
+//BACK TO TOP
+// $(document).ready(function () {
+//   $(window).scroll(function () {
+//     var scrolled = $(window).scrollTop();
+//     if (scrolled > 200) $(".totop").css("visibility", "visible").fadeIn("slow");
+//     if (scrolled < 200) $(".totop").fadeOut("slow");
+//   });
+//   //Click event
+//   $("#flight").click(function () {
+//     $("#fire").css("visibility", "visible");
+//     $("html, body").animate({ scrollTop: "0" }, 100);
+//   });
+// });
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $(".totop").waypoint(
-      function () {
-        $(".totop").css("visibility", "visible");
-        $(".totop").addClass("animate__animated animate__zoomIn");
-      },
-      { offset: "85%" }
-    );
-  }
-});
-
-$(function () {
+  var i = 0;
   $(window).scroll(function () {
     var scrolled = $(window).scrollTop();
-    if (scrolled > 200) $(".totop").fadeIn("slow");
-    if (scrolled < 200) $(".totop").fadeOut("slow");
+    if (scrolled >= 200) {
+      if (i == 0) {
+        $(".totop").css("visibility", "visible").fadeIn("slow");
+        $("#fire").css({"visibility": "hidden"});
+
+        i = 1;
+      }
+    } else {
+      if (i == 1) {
+        $(".totop").fadeOut("fast");
+        $("#fire").css({"visibility": "visible"});
+        i = 0;
+      }
+    }
   });
+  //Hover event
+  // $("#flight").mouseenter(function () {
+  //   $("#flight").addClass("animate__animated animate__shakeY");
+  // });
+  // $("#flight").mouseleave(function () {
+  //   $("#flight").removeClass("animate__animated animate__shakeY");
+  // });
   //Click event
-  $(".to-top").click(function () {
-    $("html, body").animate({ scrollTop: "0" }, 500);
+  $("#flight").click(function () {
+    $("#fire").css("visibility", "visible");
+    $("html, body").animate({ scrollTop: "0" }, 0);
   });
 });
+
 
 //MOBILE VIEW
 $(document).ready(function () {

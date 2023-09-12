@@ -223,7 +223,7 @@ body {
 /* BACT TO TOP */
 
 .totop {
-    z-index: 11;
+    z-index: 15;
     position: absolute;
     position: fixed;
     bottom: 2%;
@@ -232,15 +232,41 @@ body {
 
 }
 
-.totop i{
+.totop i {
     color: #88C63E;
 }
 
 
+#fire {
+    background: linear-gradient(to bottom, #ff6600 70%, #8dff23 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    visibility: hidden;
+    font-size: small;
+}
 
-
-
-
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#89c63e00; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c2f26a00; 
+  }
 
 
 
