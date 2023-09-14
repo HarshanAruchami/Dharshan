@@ -6,7 +6,7 @@ $(function () {
   });
 });
 
-//LAPTOP VIEW
+//================================================================================LAPTOP VIEW=================
 //baner content
 $(document).ready(function () {
   if (window.innerWidth > 991) {
@@ -118,7 +118,17 @@ $(document).ready(function () {
     );
   }
 });
-
+$(document).ready(function () {
+  $(".t-col").waypoint(
+    setTimeout(function () {
+      $(".t-col p").css("visibility", "visible");
+      $(".t-col p").addClass("animate__animated animate__slideInUp");
+    }, 1600),
+    {
+      offset: "90%",
+    }
+  );
+});
 //H3 hover effect
 $(document).ready(function () {
   $(".hover-cards .card h3,#flight").mouseenter(function () {
@@ -132,7 +142,7 @@ $(document).ready(function () {
 //HOVER EFFECT SHADOW FOR CARDS
 $(document).ready(function () {
   if (window.innerWidth > 768) {
-    $("#sh-1").mouseenter(function () {
+    $("#sh-1,#sh-2,#sh-3,#sh-4,#sh-5,#sh-6").mouseenter(function () {
       $(this).animate(
         {
           "margin-top": "-.8em",
@@ -141,93 +151,8 @@ $(document).ready(function () {
         400
       );
     });
-    $("#sh-1").mouseleave(function () {
-      $("#sh-1").animate({ "margin-top": "0em" }, 400);
-    });
-  }
-});
-
-$(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#sh-2").mouseenter(function () {
-      $("#sh-2").animate(
-        {
-          "margin-top": "-.8em",
-          easing: "easeIn",
-        },
-        400
-      );
-    });
-    $("#sh-2").mouseleave(function () {
-      $("#sh-2").animate({ "margin-top": "0em" }, 400);
-    });
-  }
-});
-
-$(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#sh-3").mouseenter(function () {
-      $("#sh-3").animate(
-        {
-          "margin-top": "-.8em",
-          easing: "easeIn",
-        },
-        400
-      );
-    });
-    $("#sh-3").mouseleave(function () {
-      $("#sh-3").animate({ "margin-top": "0em" }, 400);
-    });
-  }
-});
-
-$(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#sh-4").mouseenter(function () {
-      $("#sh-4").animate(
-        {
-          "margin-top": "-.8em",
-          easing: "easeIn",
-        },
-        400
-      );
-    });
-    $("#sh-4").mouseleave(function () {
-      $("#sh-4").animate({ "margin-top": "0em" }, 400);
-    });
-  }
-});
-
-$(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#sh-5").mouseenter(function () {
-      $("#sh-5").animate(
-        {
-          "margin-top": "-.8em",
-          easing: "easeIn",
-        },
-        400
-      );
-    });
-    $("#sh-5").mouseleave(function () {
-      $("#sh-5").animate({ "margin-top": "0em" }, 400);
-    });
-  }
-});
-
-$(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#sh-6").mouseenter(function () {
-      $("#sh-6").animate(
-        {
-          "margin-top": "-.8em",
-          easing: "easeIn",
-        },
-        400
-      );
-    });
-    $("#sh-6").mouseleave(function () {
-      $("#sh-6").animate({ "margin-top": "0em" }, 400);
+    $("#sh-1,#sh-2,#sh-3,#sh-4,#sh-5,#sh-6").mouseleave(function () {
+      $(this).animate({ "margin-top": "0em" }, 400);
     });
   }
 });
@@ -258,18 +183,6 @@ $(document).ready(function () {
 });
 
 //BACK TO TOP
-// $(document).ready(function () {
-//   $(window).scroll(function () {
-//     var scrolled = $(window).scrollTop();
-//     if (scrolled > 200) $(".totop").css("visibility", "visible").fadeIn("slow");
-//     if (scrolled < 200) $(".totop").fadeOut("slow");
-//   });
-//   //Click event
-//   $("#flight").click(function () {
-//     $("#fire").css("visibility", "visible");
-//     $("html, body").animate({ scrollTop: "0" }, 100);
-//   });
-// });
 $(document).ready(function () {
   var i = 0;
   $(window).scroll(function () {
@@ -277,14 +190,14 @@ $(document).ready(function () {
     if (scrolled >= 200) {
       if (i == 0) {
         $(".totop").css("visibility", "visible").fadeIn("slow");
-        $("#fire").css({"visibility": "hidden"});
+        $("#fire").css({ visibility: "hidden" });
 
         i = 1;
       }
     } else {
       if (i == 1) {
         $(".totop").fadeOut("fast");
-        $("#fire").css({"visibility": "visible"});
+        $("#fire").css({ visibility: "visible" });
         i = 0;
       }
     }
@@ -303,8 +216,83 @@ $(document).ready(function () {
   });
 });
 
+// CARDS CHARACTERS
+$(document).ready(function () {
+  if (window.innerWidth > 768) {
+    $("#card-char-1, #card-char-2, #card-char-3,#card-char-4").mouseenter(
+      function () {
+        $(this).find(".card-img-overlay").fadeIn(0.01).animate({
+          "margin-top": "12.8em",
+          easing: "easeIn",
+          queue: false,
+        });
+        $(this).find(".card-img-overlay").css("visibility", "visible");
+      }
+    );
 
-//MOBILE VIEW
+    $("#card-char-1, #card-char-2, #card-char-3, #card-char-4").mouseleave(
+      function () {
+        $(this)
+          .find(".card-img-overlay")
+          .animate({
+            "margin-top": "12.2em",
+            easing: "easeIn",
+            queue: false,
+          })
+          .fadeOut("fast");
+      }
+    );
+  }
+});
+//card-1
+$(document).ready(function () {
+  if (window.innerWidth > 768) {
+    $("#card-char-1").waypoint(
+      function () {
+        $("#card-char-1").addClass("animate__animated animate__fadeInUp");
+        $("#card-char-1").css("visibility", "visible");
+      },
+      { offset: "85%" }
+    );
+  }
+});
+//card-2
+$(document).ready(function () {
+  if (window.innerWidth > 768) {
+    $("#card-char-2").waypoint(
+      function () {
+        $("#card-char-2").addClass("animate__animated animate__fadeInUp");
+        $("#card-char-2").css("visibility", "visible");
+      },
+      { offset: "85%" }
+    );
+  }
+});
+//card-3
+$(document).ready(function () {
+  if (window.innerWidth > 768) {
+    $("#card-char-3").waypoint(
+      function () {
+        $("#card-char-3").addClass("animate__animated animate__fadeInUp");
+        $("#card-char-3").css("visibility", "visible");
+      },
+      { offset: "85%" }
+    );
+  }
+});
+//card-4
+$(document).ready(function () {
+  if (window.innerWidth > 768) {
+    $("#card-char-4").waypoint(
+      function () {
+        $("#card-char-4").addClass("animate__animated animate__fadeInUp");
+        $("#card-char-4").css("visibility", "visible");
+      },
+      { offset: "85%" }
+    );
+  }
+});
+//===================================================================MOBILE VIEW========================
 $(document).ready(function () {
   if (window.innerWidth <= 768) {
     $(".navbar-toggler").waypoint(
