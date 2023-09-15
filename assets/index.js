@@ -403,7 +403,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   if (window.innerWidth <= 575) {
-    $("#card-char-1, #card-char-2, #card-char-3,#card-char-4").mouseenter(
+    $("#card-char-1, #card-char-2, #card-char-3,#card-char-4").click(
       function () {
         $(this).find(".card-img-overlay").fadeIn(0.01).animate({
           "margin-top": "15.8em",
