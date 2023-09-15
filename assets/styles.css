@@ -7,7 +7,6 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
     background: linear-gradient(to right, #010E27, #022449, #010E28);
     font-family: 'Big Shoulders Text', cursive;
 }
@@ -117,12 +116,10 @@ body {
     font-size: x-large;
 }
 
-.main-content p {
-    color: #88C63E;
-}
 
 .main-content h3,
-.main-content i {
+.main-content i,
+.main-content p {
     background: linear-gradient(to left, #4a7c0cc7, #e7ffbb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -195,10 +192,6 @@ body {
     color: #C3F26A;
 }
 
-#hc-2 {
-    margin-top: 1.6em;
-}
-
 #sh-1:hover,
 #sh-2:hover,
 #sh-3:hover,
@@ -266,6 +259,7 @@ body {
 /* CARDS CHARACTERS */
 .main-cards {
     margin-top: 8em;
+    margin-bottom: 8em;
 }
 
 
@@ -278,7 +272,7 @@ body {
 }
 
 .card-img-overlay {
-    margin-top: 12em;
+    margin-top: 8em;
     visibility: hidden;
 }
 
@@ -310,12 +304,108 @@ body {
     visibility: hidden;
     border-radius: 2%;
     background: #021931;
-   border-color: #8dff23;
+    border-color: #8dff23;
+}
+
+/* footer */
+footer a,
+footer .num {
+    color: #88C63E !important;
+}
+
+footer a:hover,
+footer .num:hover {
+    color: #cdf583 !important;
+    text-decoration: none;
+}
+
+footer span p {
+    color: #cdf583;
+}
+
+footer {
+    padding: 2rem 0;
+    box-shadow: inset 200px 200px 200px 200px rgba(255, 255, 255, 0.062);
+}
+
+.footer-column {
+    text-align: center;
+}
+
+
+ul.social-buttons {
+    margin-bottom: 0;
+}
+
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+    background-color: #ffffff27;
+}
+
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #fff;
+    border-radius: 100%;
+    outline: 0;
+}
+
+footer .quick-links {
+    font-size: 90%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+}
+
+.copyright {
+    color: #88C63E;
+}
+
+.fa-ellipsis-h {
+    color: white;
+    padding: 2rem 0;
+}
+
+
+#tab {
+    display: none;
 }
 
 
 
 
+
+
+
+
+
+
+
+@media (min-width:768px) and (max-width:1024px) {
+
+    #v-row-2,
+    #v-row-3,
+    #v-row-4 {
+        margin-top: 4em;
+    }
+
+    .main-content h3 {
+        font-weight: 300;
+        font-size: small;
+    }
+
+    .main-content p {
+        font-weight: 200;
+        font-size: small;
+    }
+}
 
 
 
@@ -427,7 +517,7 @@ body {
         border-color: #E95619;
         border-radius: 5%;
         background-size: 100% 200%;
-        background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0) 50%, #E95619 50%);
+        background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0) 50%, #2e0000 50%);
         -webkit-transition: background-position 1s;
         -moz-transition: background-position 1s;
         transition: background-position 500ms;
@@ -443,7 +533,143 @@ body {
 
     #card-border:hover i,
     #card-border:hover p {
-        color: #070712;
+        color: #E95619;
+    }
+
+    /* venom */
+    .main-content h3,
+    .main-content i,
+    .main-content p {
+        background: linear-gradient(to left, #e957199d, #e4671f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* hover cards */
+    .hover-cards .card {
+        padding: 2em;
+        border-radius: 1%;
+        /* background-color: #00000025; */
+        background-color: #2e0000;
+        border-color: #fa8948;
+    }
+
+    .hover-cards .card i {
+        color: #000000;
+        background-color: #fa8948;
+    }
+
+    .hover-cards .card h3 {
+        color: #fa8948;
+
+    }
+
+    .hover-cards .card p {
+        color: #E95619;
+    }
+
+    /* jquery hover */
+    .dummy:hover {
+        color: #E95619 !important;
+        transition: color .5s ease-in-out !important;
+    }
+
+    /* back to top  */
+    .totop i {
+        color: #E95619;
+    }
+
+    #fire {
+        background: linear-gradient(to bottom, #00ff00 70%, #ff9823 30%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        visibility: hidden;
+        font-size: small;
+
+    }
+
+    /* characters cards */
+    .card-img-overlay a {
+        color: #E95619 !important;
+
+    }
+
+    .card-img-overlay .card:hover {
+        color: #fa8948 !important;
+    }
+
+    .card-title b {
+        color: #E95619;
+    }
+
+    #card-char-1,
+    #card-char-2,
+    #card-char-3,
+    #card-char-4 {
+        visibility: hidden;
+        border-radius: 2%;
+        background: #2e0000;
+        border-color: #E95619;
+    }
+
+    footer a,
+    footer .num {
+        color: #E95619 !important;
+    }
+
+    footer a:hover,
+    footer .num:hover,
+    footer span p {
+        color: #fa8948 !important;
+    }
+
+    .copyright {
+        color: #E95619;
+    }
+
+    /* space b/w layouts */
+
+    .cards,
+    .main-content {
+        margin-top: 5em;
+        margin-bottom: 5em;
+
+    }
+
+
+    .card-img-overlay {
+        margin-top: 8em;
+        padding: 0em;
+        visibility: hidden;
+    }
+
+    .card-img-overlay .card {
+        border-radius: 10%;
+        align-items: center;
+        background-color: #000000a1 !important;
+        padding: .5em .2em;
+
+    }
+
+    .card-img-overlay .card:hover {
+        color: #ffbb00 !important;
+    }
+
+    #venom,
+    #desktop {
+        display: none;
+    }
+
+    #tab {
+        display: inline;
+    }
+}
+
+@media (max-width:870px) {
+    .card-img-overlay {
+        margin-top: 7em;
+        padding: 0em;
+        visibility: hidden;
     }
 }
 
@@ -457,6 +683,21 @@ body {
     .banner-content #f-col p:last-child,
     .banner-content #s-col p:last-child {
         font-size: 8px;
+    }
+
+    /* venom */
+
+    #v-row-2,
+    #v-row-3,
+    #v-row-4 {
+        margin-top: 1.5em;
+    }
+
+    /* last cards */
+    .card-img-top img {
+        height: 35vw;
+
+
     }
 
 
@@ -492,6 +733,20 @@ body {
     #card-border {
         margin-top: 2em;
     }
+
+    /* last cards */
+    .card-img-top img {
+        height: 80vw;
+
+
+    }
+
+    .card-img-overlay {
+        margin-top: 15em !important;
+        padding: 0em;
+        visibility: hidden;
+    }
+
 }
 
 @media (max-width:358px) {
@@ -504,4 +759,13 @@ body {
         z-index: 0;
     }
 
+    .main-content h3 {
+        font-weight: 300;
+        font-size: small;
+    }
+
+    .main-content p {
+        font-weight: 200;
+        font-size: x-small;
+    }
 }

@@ -7,7 +7,7 @@ $(function () {
 });
 
 //================================================================================LAPTOP VIEW=================
-//baner content
+//banner content
 $(document).ready(function () {
   if (window.innerWidth > 991) {
     $("#f-col").waypoint(
@@ -63,7 +63,7 @@ $(document).ready(function () {
 });
 //layout-3 VENOM
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 991) {
     $("#venom").waypoint(
       function () {
         $("#venom").css("visibility", "visible");
@@ -73,62 +73,55 @@ $(document).ready(function () {
     );
   }
 });
+$(document).ready(function () {
+  if (window.innerWidth <=991) {
+    $("#tab").waypoint(
+      function () {
+        $("#tab").css("visibility", "visible");
+        $("#tab").addClass("animate__animated animate__zoomIn");
+      },
+      { offset: "85%" }
+    );
+  }
+});
 //layout-3 CONTENTS
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#v-row-1").waypoint(
-      function () {
-        $("#v-row-1").css("visibility", "visible");
-        $("#v-row-1").addClass("animate__animated animate__zoomIn");
-      },
-      { offset: "85%" }
-    );
-  }
-});
-$(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#v-row-2").waypoint(
-      function () {
-        $("#v-row-2").css("visibility", "visible");
-        $("#v-row-2").addClass("animate__animated animate__zoomIn");
-      },
-      { offset: "85%" }
-    );
-  }
-});
-$(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#v-row-3").waypoint(
-      function () {
-        $("#v-row-3").css("visibility", "visible");
-        $("#v-row-3").addClass("animate__animated animate__zoomIn");
-      },
-      { offset: "85%" }
-    );
-  }
-});
-$(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#v-row-4").waypoint(
-      function () {
-        $("#v-row-4").css("visibility", "visible");
-        $("#v-row-4").addClass("animate__animated animate__zoomIn");
-      },
-      { offset: "85%" }
-    );
-  }
-});
-$(document).ready(function () {
-  $(".t-col").waypoint(
-    setTimeout(function () {
-      $(".t-col p").css("visibility", "visible");
-      $(".t-col p").addClass("animate__animated animate__slideInUp");
-    }, 1600),
-    {
-      offset: "90%",
-    }
+  $("#v-row-1").waypoint(
+    function () {
+      $("#v-row-1").css("visibility", "visible");
+      $("#v-row-1").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
   );
 });
+$(document).ready(function () {
+  $("#v-row-2").waypoint(
+    function () {
+      $("#v-row-2").css("visibility", "visible");
+      $("#v-row-2").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
+});
+$(document).ready(function () {
+  $("#v-row-3").waypoint(
+    function () {
+      $("#v-row-3").css("visibility", "visible");
+      $("#v-row-3").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
+});
+$(document).ready(function () {
+  $("#v-row-4").waypoint(
+    function () {
+      $("#v-row-4").css("visibility", "visible");
+      $("#v-row-4").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
+});
+
 //H3 hover effect
 $(document).ready(function () {
   $(".hover-cards .card h3,#flight").mouseenter(function () {
@@ -159,27 +152,60 @@ $(document).ready(function () {
 
 //layout-4 CARDS
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#sh-1,#sh-2,#sh-3").waypoint(
-      function () {
-        $("#sh-1,#sh-2,#sh-3").css("visibility", "visible");
-        $("#sh-1,#sh-2,#sh-3").addClass("animate__animated animate__zoomIn");
-      },
-      { offset: "85%" }
-    );
-  }
+  $("#sh-1").waypoint(
+    function () {
+      $("#sh-1").css("visibility", "visible");
+      $("#sh-1").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
 });
 
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#sh-4,#sh-5,#sh-6").waypoint(
-      function () {
-        $("#sh-4,#sh-5,#sh-6").css("visibility", "visible");
-        $("#sh-4,#sh-5,#sh-6").addClass("animate__animated animate__zoomIn");
-      },
-      { offset: "85%" }
-    );
-  }
+  $("#sh-2").waypoint(
+    function () {
+      $("#sh-2").css("visibility", "visible");
+      $("#sh-2").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
+});
+
+$(document).ready(function () {
+  $("#sh-3").waypoint(
+    function () {
+      $("#sh-3").css("visibility", "visible");
+      $("#sh-3").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
+});
+$(document).ready(function () {
+  $("#sh-4").waypoint(
+    function () {
+      $("#sh-4").css("visibility", "visible");
+      $("#sh-4").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
+});
+$(document).ready(function () {
+  $("#sh-5").waypoint(
+    function () {
+      $("#sh-5").css("visibility", "visible");
+      $("#sh-5").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
+});
+$(document).ready(function () {
+  $("#sh-6").waypoint(
+    function () {
+      $("#sh-6").css("visibility", "visible");
+      $("#sh-6").addClass("animate__animated animate__zoomIn");
+    },
+    { offset: "85%" }
+  );
 });
 
 //BACK TO TOP
@@ -212,17 +238,17 @@ $(document).ready(function () {
   //Click event
   $("#flight").click(function () {
     $("#fire").css("visibility", "visible");
-    $("html, body").animate({ scrollTop: "0" }, 0);
+    $("html, body").animate({ scrollTop: "0" }, 600);
   });
 });
 
 // CARDS CHARACTERS
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth >991) {
     $("#card-char-1, #card-char-2, #card-char-3,#card-char-4").mouseenter(
       function () {
         $(this).find(".card-img-overlay").fadeIn(0.01).animate({
-          "margin-top": "12.8em",
+          "margin-top": "8.8em",
           easing: "easeIn",
           queue: false,
         });
@@ -235,7 +261,7 @@ $(document).ready(function () {
         $(this)
           .find(".card-img-overlay")
           .animate({
-            "margin-top": "12.2em",
+            "margin-top": "8.2em",
             easing: "easeIn",
             queue: false,
           })
@@ -246,53 +272,45 @@ $(document).ready(function () {
 });
 //card-1
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#card-char-1").waypoint(
-      function () {
-        $("#card-char-1").addClass("animate__animated animate__fadeInUp");
-        $("#card-char-1").css("visibility", "visible");
-      },
-      { offset: "85%" }
-    );
-  }
+  $("#card-char-1").waypoint(
+    function () {
+      $("#card-char-1").addClass("animate__animated animate__fadeInUp");
+      $("#card-char-1").css("visibility", "visible");
+    },
+    { offset: "85%" }
+  );
 });
 //card-2
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#card-char-2").waypoint(
-      function () {
-        $("#card-char-2").addClass("animate__animated animate__fadeInUp");
-        $("#card-char-2").css("visibility", "visible");
-      },
-      { offset: "85%" }
-    );
-  }
+  $("#card-char-2").waypoint(
+    function () {
+      $("#card-char-2").addClass("animate__animated animate__fadeInUp");
+      $("#card-char-2").css("visibility", "visible");
+    },
+    { offset: "85%" }
+  );
 });
 //card-3
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#card-char-3").waypoint(
-      function () {
-        $("#card-char-3").addClass("animate__animated animate__fadeInUp");
-        $("#card-char-3").css("visibility", "visible");
-      },
-      { offset: "85%" }
-    );
-  }
+  $("#card-char-3").waypoint(
+    function () {
+      $("#card-char-3").addClass("animate__animated animate__fadeInUp");
+      $("#card-char-3").css("visibility", "visible");
+    },
+    { offset: "85%" }
+  );
 });
 //card-4
 $(document).ready(function () {
-  if (window.innerWidth > 768) {
-    $("#card-char-4").waypoint(
-      function () {
-        $("#card-char-4").addClass("animate__animated animate__fadeInUp");
-        $("#card-char-4").css("visibility", "visible");
-      },
-      { offset: "85%" }
-    );
-  }
+  $("#card-char-4").waypoint(
+    function () {
+      $("#card-char-4").addClass("animate__animated animate__fadeInUp");
+      $("#card-char-4").css("visibility", "visible");
+    },
+    { offset: "85%" }
+  );
 });
-//===================================================================MOBILE VIEW========================
+//===================================================================small device========================
 $(document).ready(function () {
   if (window.innerWidth <= 768) {
     $(".navbar-toggler").waypoint(
@@ -323,6 +341,90 @@ $(document).ready(function () {
         );
       },
       { offset: "10%" }
+    );
+  }
+});
+// CARDS CHARACTERS
+$(document).ready(function () {
+  if (window.innerWidth <= 991) {
+    $("#card-char-1, #card-char-2, #card-char-3,#card-char-4").mouseenter(
+      function () {
+        $(this).find(".card-img-overlay").fadeIn(0.01).animate({
+          "margin-top": "8.8em",
+          easing: "easeIn",
+          queue: false,
+        });
+        $(this).find(".card-img-overlay").css("visibility", "visible");
+      }
+    );
+
+    $("#card-char-1, #card-char-2, #card-char-3, #card-char-4").mouseleave(
+      function () {
+        $(this)
+          .find(".card-img-overlay")
+          .animate({
+            "margin-top": "8.2em",
+            easing: "easeIn",
+            queue: false,
+          })
+          .fadeOut("fast");
+      }
+    );
+  }
+});
+
+$(document).ready(function () {
+  if (window.innerWidth <= 870) {
+    $("#card-char-1, #card-char-2, #card-char-3,#card-char-4").mouseenter(
+      function () {
+        $(this).find(".card-img-overlay").fadeIn(0.01).animate({
+          "margin-top": "7.8em",
+          easing: "easeIn",
+          queue: false,
+        });
+        $(this).find(".card-img-overlay").css("visibility", "visible");
+      }
+    );
+
+    $("#card-char-1, #card-char-2, #card-char-3, #card-char-4").mouseleave(
+      function () {
+        $(this)
+          .find(".card-img-overlay")
+          .animate({
+            "margin-top": "7.2em",
+            easing: "easeIn",
+            queue: false,
+          })
+          .fadeOut("fast");
+      }
+    );
+  }
+});
+
+$(document).ready(function () {
+  if (window.innerWidth <= 575) {
+    $("#card-char-1, #card-char-2, #card-char-3,#card-char-4").mouseenter(
+      function () {
+        $(this).find(".card-img-overlay").fadeIn(0.01).animate({
+          "margin-top": "15.8em",
+          easing: "easeIn",
+          queue: false,
+        });
+        $(this).find(".card-img-overlay").css("visibility", "visible");
+      }
+    );
+
+    $("#card-char-1, #card-char-2, #card-char-3, #card-char-4").mouseleave(
+      function () {
+        $(this)
+          .find(".card-img-overlay")
+          .animate({
+            "margin-top": "15.2em",
+            easing: "easeIn",
+            queue: false,
+          })
+          .fadeOut("fast");
+      }
     );
   }
 });
